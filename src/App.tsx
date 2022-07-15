@@ -12,23 +12,25 @@ import Foodcard from "./components/FoodCard";
 import Foodpage from "./pages/Foodpage";
 import Homepage from "./pages/Homepage";
 import Loginpage from "./pages/Loginpage";
-import Authprovider from "./components/Auth";
 import Profile from "./pages/profile";
+import MainLayout from "./components/MainLayout";
 
 const App = () => {
   return (
-    <Authprovider>
-      <Router>
-        <Newheader />
-        <Routes>
-          <Route path="/food" element={<Foodpage />}></Route>
-          <Route path="/counter" element={<Counter />}></Route>
-          <Route path="/food/:id" element={<Insidecard />}></Route>
-          <Route path="/home" element={<Homepage />}></Route>
-          <Route path="/login" element={<Profile />}></Route>
-        </Routes>
-      </Router>
-    </Authprovider>
+    <Router>
+      <Newheader />
+      <Routes>
+        {/* this first route "/" is the root route which every child of will be wrapped with main layout */}
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Foodpage />} />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/food/:id" element={<Insidecard />} />
+          <Route path="/home" element={<Homepage />} />
+        </Route>
+        {/* this is the second login register route which isnt wrapped with main layout \ */}
+        <Route path="/login" element={<Profile />} />
+      </Routes>
+    </Router>
   );
 };
 

@@ -1,9 +1,7 @@
 import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "./Auth";
 
 interface NewheaderProps {}
-const auth = useAuth();
 
 const Newheader: FunctionComponent<NewheaderProps> = () => {
   return (
@@ -24,11 +22,6 @@ const Newheader: FunctionComponent<NewheaderProps> = () => {
       <div>
         <span className="rounded-full bg-sky-400  h-12 w-12 text-center flex items-center justify-center"></span>
       </div>
-      {!auth.user && (
-        <Link className="hover:scale-105" to="./login">
-          login{" "}
-        </Link>
-      )}
     </div>
   );
 };
