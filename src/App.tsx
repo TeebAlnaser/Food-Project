@@ -22,6 +22,7 @@ const App = () => {
       <Routes>
         {/* this first route "/" is the root route which every child of will be wrapped with main layout */}
         <Route path="/" element={<MainLayout />}>
+          {/* index means this is the first page to show it doesnt need  a path so http://localhost:3000/ is this page */}
           <Route index element={<Foodpage />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/food/:id" element={<Insidecard />} />
