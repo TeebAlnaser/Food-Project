@@ -1,7 +1,6 @@
 import { createContext, FunctionComponent, useContext, useState } from "react";
 
 interface AuthproviderProps {}
-
 const authContext = createContext(null);
 
 const Authprovider: FunctionComponent<AuthproviderProps> = (children) => {
@@ -14,7 +13,12 @@ const Authprovider: FunctionComponent<AuthproviderProps> = (children) => {
   const logout = () => {
     setUser(null);
   };
-  return <authContext.Provider> {children}</authContext.Provider>;
+  return (
+    <authContext.Provider value={{ user, login, logout }}>
+      {" "}
+      {children}
+    </authContext.Provider>
+  );
 };
 
 export default Authprovider;

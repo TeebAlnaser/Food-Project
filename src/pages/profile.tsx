@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../components/Auth";
 
 interface ProfileProps {}
-const auth = useAuth();
-const navigate = useNavigate();
+
 const Profile: FunctionComponent<ProfileProps> = () => {
+  const auth = useAuth();
+  const navigate = useNavigate();
   const logoutHander = () => {
     auth.logout();
     navigate("/");

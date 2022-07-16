@@ -2,12 +2,13 @@ import { FunctionComponent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Authprovider, { useAuth } from "../components/Auth";
 
-const auth = useAuth();
-const navigate = useNavigate();
 interface LoginProps {}
 
 const Login: FunctionComponent<LoginProps> = () => {
   const [user, setUser] = useState("");
+  // const authContext = createContext(null);
+  const auth = useAuth();
+  const navigate = useNavigate();
 
   const loginhandler = () => {
     auth.login(user);

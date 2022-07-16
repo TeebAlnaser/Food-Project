@@ -14,6 +14,7 @@ import Homepage from "./pages/Homepage";
 import Loginpage from "./pages/Loginpage";
 import Authprovider from "./components/Auth";
 import Profile from "./pages/profile";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/food/:id" element={<Insidecard />}></Route>
           <Route path="/home" element={<Homepage />}></Route>
           <Route path="/login" element={<Profile />}></Route>
+          <Route path="/footer" element={<Footer />}></Route>
         </Routes>
       </Router>
     </Authprovider>

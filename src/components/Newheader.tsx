@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { useAuth } from "./Auth";
 
 interface NewheaderProps {}
-const auth = useAuth();
 
 const Newheader: FunctionComponent<NewheaderProps> = () => {
+  const auth = useAuth();
+
   return (
     <div className="flex items-center justify-between py-4 w-full   px-2 pl-10 ">
       <div className=" flex gap-4 subpixel-antialiased text-2xl  font-bold text-cyan-500">
