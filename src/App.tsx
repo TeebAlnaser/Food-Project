@@ -2,7 +2,6 @@ import { useState } from "react";
 // import { QueryClient, QueryClientProvider } from "react-query";
 import Newcard from "./components/Newcard";
 import axios from "axios";
-import Newheader from "./components/Newheader";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Counter from "./components/Counter";
