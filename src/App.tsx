@@ -2,11 +2,8 @@ import { useState } from "react";
 // import { QueryClient, QueryClientProvider } from "react-query";
 import Newcard from "./components/Newcard";
 import axios from "axios";
-<<<<<<< Updated upstream
 import Newheader from "./components/Newheader";
 import Header from "./components/Header";
-=======
->>>>>>> Stashed changes
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Counter from "./components/Counter";
 import Home from "./pages/Foodpage";
@@ -18,13 +15,12 @@ import Loginpage from "./pages/Loginpage";
 import Authprovider from "./components/Auth";
 import Profile from "./pages/profile";
 import Footer from "./components/Footer";
-import Header from "./components/header";
 
 const App = () => {
   return (
     <Authprovider>
       <Router>
-        <Newheader />
+        <Header />
         <Routes>
           <Route path="/food" element={<Foodpage />}></Route>
           <Route path="/counter" element={<Counter />}></Route>
