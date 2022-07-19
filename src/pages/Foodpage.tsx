@@ -14,7 +14,7 @@ const Food = () => {
     .catch((err) => console.log(err));
 
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto m-2">
       <div>
         <div className=" grid grid-cols-3 gap-4 ">
           {data?.map((item, index) => {

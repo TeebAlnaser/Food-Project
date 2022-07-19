@@ -1,11 +1,11 @@
 import { FunctionComponent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const navigate = useNavigate();
 interface LoginProps {}
 
 const Login: FunctionComponent<LoginProps> = () => {
   const [user, setUser] = useState("");
+  const navigate = useNavigate();
 
   return (
     <div className="container px-10 mx-auto shadow-sm  m-2 p-3  ">
