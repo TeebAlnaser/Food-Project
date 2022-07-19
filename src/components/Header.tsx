@@ -24,6 +24,7 @@ const Header: FunctionComponent<NewheaderProps> = () => {
         </Link>
       </div>
       <div>
+        <h1>hi </h1>
         <span className="rounded-full bg-sky-400  h-12 w-12 text-center flex items-center justify-center"></span>
       </div>
     </div>
